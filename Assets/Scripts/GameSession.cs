@@ -1,5 +1,4 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -36,7 +35,7 @@ public class GameSession : MonoBehaviour
         if (playerLives <= 0)
         {
             // Turn off the heart image and turn on the skull image
-            livesText.text = "0";
+            // livesText.text = "0";
             heartImage.enabled = false;
             skullImage.enabled = true;
             livesText.enabled = false;
@@ -70,6 +69,7 @@ public class GameSession : MonoBehaviour
 
     void ResetGameSession()
     {
+        FindAnyObjectByType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
         scoreText.text = "0";
