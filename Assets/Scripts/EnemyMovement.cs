@@ -22,7 +22,7 @@ public class EnemyMovement : MonoBehaviour
 
     void FlipEnemyFacing()
     {
-        if (myBoxCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Hazard", "Enemy")))
+        if (myBoxCollider.IsTouchingLayers(LayerMask.GetMask("Ground", "Hazard", "Enemy", "Bouncing")))
         {
             transform.localScale = new Vector2(-(Mathf.Sign(myRigidbody.linearVelocity.x)), 1f);
             moveSpeed = -moveSpeed;
