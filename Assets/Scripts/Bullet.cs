@@ -28,6 +28,7 @@ public class Bullet : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            FindAnyObjectByType<GameSession>().AddToScore(3);
         }
         else if ((destroyLayers & (1 << collision.gameObject.layer)) != 0)
         {
