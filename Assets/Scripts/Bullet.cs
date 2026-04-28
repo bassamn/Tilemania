@@ -3,6 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float bulletSpeed = 10f;
+    LayerMask destroyLayers;
 
     Rigidbody2D myRigidbody;
     PlayerMovement player;
@@ -13,6 +14,7 @@ public class Bullet : MonoBehaviour
         myRigidbody = GetComponent<Rigidbody2D>();
         player = FindAnyObjectByType<PlayerMovement>();
         xSpeed = player.transform.localScale.x * bulletSpeed;
+        destroyLayers = LayerMask.GetMask("Ground", "Bouncing", "Hazard");
     }
 
     void Update()
@@ -27,7 +29,7 @@ public class Bullet : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        else if ((destroyLayers & (1 << collision.gameObject.layer)) != 0)
         {
             Destroy(gameObject);
         }
