@@ -1,12 +1,16 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] Image heartImage;
+    [SerializeField] Image skullImage;
 
     void Awake()
     {
@@ -27,6 +31,22 @@ public class GameSession : MonoBehaviour
         scoreText.text = "0";
     }
 
+    void UpdateLivesUI()
+    {
+        if (playerLives <= 0)
+        {
+            // Turn off the heart image and turn on the skull image
+            livesText.text = "0";
+            heartImage.enabled = false;
+            skullImage.enabled = true;
+            livesText.enabled = false;
+        }
+        else
+        {
+            livesText.text = playerLives.ToString();
+        }
+    }
+
     public void ProcessPlayerDeath()
     {
         if (playerLives > 0)
@@ -42,6 +62,7 @@ public class GameSession : MonoBehaviour
     void TakeLife()
     {
         playerLives--;
+        UpdateLivesUI();
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
         livesText.text = playerLives.ToString();
