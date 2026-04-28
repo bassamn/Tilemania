@@ -25,6 +25,7 @@ public class CoinPickup : MonoBehaviour
                 if (coinTilemap.HasTile(cellPosition))
                 {
                     coinTilemap.SetTile(cellPosition, null);
+                    FindAnyObjectByType<GameSession>().AddToScore(1);
                     
                     if (coinPickupSFX != null)
                     {
