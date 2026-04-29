@@ -4,7 +4,7 @@ A 2D platformer game created during the GameDev.tv course with custom modificati
 
 ## 🎮 About
 
-This project is based on the **Tilemania** tutorial from GameDev.tv. I've customized the game by modifying rules, UI elements, and gameplay mechanics to create a unique experience.
+This project is based on the **Tilemania** tutorial from GameDev.tv. I've customized the game by modifying rules, UI elements, and gameplay mechanics.
 
 ## 🕹️ How to Play
 
