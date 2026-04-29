@@ -23,9 +23,12 @@ This project is based on the **Tilemania** tutorial from GameDev.tv. I've custom
 - **Hazards**: Avoid water, spikes, and enemies - touching them causes death
 - **Bouncing Mushrooms**: Use mushrooms to bounce higher
 - **Coins**: Collect coins scattered throughout levels
-- **Enemies**: Defeat enemies to earn 3 coins each
+- **Enemies**: Shoot enemies to earn 3 coins each
 
-## 📸 Screenshots & Gameplay
+## 📸 Gameplay
+<div align="center">
+  <img src="gameplay.gif">
+</div>
 
 ## 🎨 Assets
 
