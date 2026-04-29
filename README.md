@@ -31,18 +31,12 @@ This project is based on the **Tilemania** tutorial from GameDev.tv. I've custom
 
 - **Base Assets**: [Unity Asset Store](https://assetstore.unity.com/packages/2d/environments/super-platformer-assets-42013)
 - **Custom Assets**: Exit button, UI elements, and additional sprites created by me:
-  <div>
-    <img src="Assets/Sprites/bullet.png">
-  </div>
-  <div>
-    <img src="Assets/Sprites/exit.png">
-  </div>
-  <div>
-    <img src="Assets/Sprites/heart.png">
-  </div>
-  <div>
-    <img src="Assets/Sprites/skull.png">
-  </div>
+  <div style="display: flex; gap: 5px; align-items: center;">
+  <img src="Assets/Sprites/bullet.png" width="80">
+  <img src="Assets/Sprites/exit.png" width="80">
+  <img src="Assets/Sprites/heart.png" width="80">
+  <img src="Assets/Sprites/skull.png" width="80">
+</div>
 
 ## 🛠️ Built With
 
