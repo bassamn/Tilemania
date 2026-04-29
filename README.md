@@ -53,13 +53,3 @@ Download the latest release from the [Releases](../../releases) page.
 ### System Requirements
 - **OS**: Windows 64-bit
 - **Architecture**: Intel 64-bit (x86_64)
-
-## 📝 Development Notes
-
-This project was created as part of my learning journey in game development. Key modifications from the original tutorial include:
-- Custom lives system with skull/heart UI
-- Modified respawn mechanics
-- Custom exit button
-- Enhanced level design
-- Persistent coin/enemy state within levels
-
